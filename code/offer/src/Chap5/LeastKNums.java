@@ -48,6 +48,7 @@ public class LeastKNums {
         int v = array[low];
         while (true) {
             while (array[++i] < v) if (i == high) break;
+            //符合条件就继续循环下去，不符合条件就跳出循环，得到一个i在下面的swap的代码中进行交换
             while (array[--j] > v) if (j == low) break;
             if (i >= j) break;
             swap(array, i, j);
