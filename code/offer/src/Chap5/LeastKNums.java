@@ -129,3 +129,15 @@ public class LeastKNums {
     }
 
 }
+public static void main(String[] args) {//测试代码
+            System.out.println("Hello World");
+            int[] a = {12, 20, 5, 16, 15, 1, 30, 45, 23, 9};
+            int start = 0;
+            int end = a.length - 1;
+            //select(a, 7);
+            ArrayList<Integer> b=getLeastK(a,2);
+            System.out.println(b);
+//            for (int i = 0; i < a.size(); i++) {
+//                System.out.print(a[i] + " ");
+//            }
+        }
