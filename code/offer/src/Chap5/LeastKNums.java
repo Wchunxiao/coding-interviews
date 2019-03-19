@@ -110,12 +110,14 @@ public class LeastKNums {
     /**
      * 上面两个方法都改变了输入数组
      * 直接使用Java内置的优先队列
+     PriorityQueue优先队列
+     Java的优先队列每次取最小元素，C++的优先队列每次取最大元素
      */
     public ArrayList<Integer> getLeastK(int[] input, int k) {
         ArrayList<Integer> list = new ArrayList<>();
         if (input == null || input.length == 0 || k > input.length || k == 0) return list;
 
-        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());//Comparator.reverseOrder()倒序
         for (int a : input) {
             maxHeap.offer(a);
             // 只要size大于k，不断剔除最大值，最后优先队列里只剩最小的k个
