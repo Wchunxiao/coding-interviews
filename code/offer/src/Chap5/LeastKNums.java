@@ -30,7 +30,7 @@ public class LeastKNums {
         int high = array.length - 1;
         // high==low时只有一个元素，不切分
         while (high > low) {
-            int j = partition(array, low, high);
+            int j = partition(array, low, high);//j是已排好序的那个数字的指针
             if (j == k) return array[k];
             else if (j > k) high = j - 1;
             else if (j < k) low = j + 1;
